@@ -1,0 +1,40 @@
+#clock{
+    text-align: center;
+    color: black;
+    font-size: 575%;
+	margin: 150px 0px 0px 0px;
+     font-weight: normal;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#welcome{
+    text-align: center;
+    color: black;
+    font-size: 200%;
+    margin: 150px 0px 0px 0px;
+    font-weight: normal;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body{
+    background-size:100%;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size:100% 100vh;
+}
+
+
+
+.morning { 
+    background: url("images/morning.jpg");
+     } 
+.afternoon { 
+    background: url("images/afternoon.jpg"); 
+}
+.night1 {
+ background: url("images/night1.jpg"); 
+}
+.night2 { 
+    background: url("images/night2.jpg"); 
+}
+.night3 {
+ background: url("images/night3.jpg"); 
+} 
