@@ -1,27 +1,99 @@
+@import url(font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
+
+
 #clock{
     text-align: center;
-    color: black;
-    font-size: 575%;
-	margin: 150px 0px 0px 0px;
-     font-weight: normal;
-     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 500%;
+	margin: 112px 0px 0px 0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
 }
 #welcome{
     text-align: center;
-    color: black;
-    font-size: 200%;
-    margin: 150px 0px 0px 0px;
-    font-weight: normal;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+    color: white;
+    font-size: 150%;
+    margin: 0px 0px 0px 0px;
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+} 
 body{
     background-size:100%;
     background-repeat: no-repeat;
     position: relative;
     background-size:100% 100vh;
+    font-family:Verdana, Geneva, sans-serif;
+} 
+nav{
+    display: block;
+    text-align: center;
+    position:relative; 
+    left: 337px; 
+    width:50%;
 }
+        #header nav ul {
+            display: -moz-flex;
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin-bottom: 0;
+            margin-top: 150px;
+            list-style: none;
+            padding-left: 0;
+            padding: 0;
+            border-radius: 4px;
+            color:white;
+            text-decoration-color: white;
+        }
 
+            #header nav ul li {
+                padding-left: 0;
+                border-left: solid 1px #ffffff;
+                display:inline;
+                color:white;
+            }
 
+                #header nav ul li:first-child {
+                    border-left: 0;
+                }
+
+                #header nav ul li a {
+                    display: inline-block;
+                    min-width: 7.5rem;
+                    height: 2.75rem;
+                    line-height: 2.75rem;
+                    padding: 0 1.25rem 0 1.45rem;
+                    text-transform: uppercase;
+                    letter-spacing: 0.2rem;
+                    font-size: 0.8rem;
+                    border-bottom: 0;
+                    color:white;
+                    text-decoration-color: white:;
+                }
+
+                    #header nav ul li a:hover {
+                        background-color: rgba(255, 255, 255, 0.075);
+                    }
+
+                    #header nav ul li a:active {
+                        background-color: rgba(255, 255, 255, 0.175);
+                    }
+
+        #header nav.use-middle:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: calc(50% - 1px);
+            width: 1px;
+            height: 100%;
+            background: #ffffff;
+        }
+
+        #header nav.use-middle ul li.is-middle {
+            border-left: 0;
+        }
 
 .morning { 
     background: url("images/morning.jpg");
