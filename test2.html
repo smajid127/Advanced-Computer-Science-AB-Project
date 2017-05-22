@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- link rel="stylesheet" type="text/css" href="assets/css/home.css" -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--script src="assets/js/quotes.js"></script-->
+
+
+
+<title>please work</title>
+</head>
+<body>
+	<div id="quoteDisplay"><p></p></div>
+	<style type="text/css">
+		#quoteDisplay p {
+		    opacity: 0;
+		    margin-top: 25px;
+		    font-size: 21px;
+		    text-align: center;
+		    -webkit-transition: opacity 2s ease-in;
+		    -moz-transition: opacity 2s ease-in;
+		    -o-transition: opacity 2s ease-in;
+		    -ms-transition: opacity 2s ease-in;
+		    transition: opacity 2s ease-in;
+	}
+		#quoteDisplay p.load {
+		   opacity: 1;
+}
+	</style>
+		<script type="text/javascript">
+		$(document).ready(function(){
+		var quotes = ["It's not about the destination, it's about the journey" + "<br />" +  "- Eric Guan"];
+	var randomNumber = Math.floor(Math.random()*(quotes.length));
+	var actualQuote = quotes[randomNumber];
+$("#quoteDisplay p").text(actualQuote);
+$("#quoteDisplay p").addClass("load");
+});
+	</script>
+</body>
+</html>

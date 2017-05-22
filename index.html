@@ -7,9 +7,12 @@
     <meta name="description" content = "CS AB Final Project" /> 
     <meta name="author" content="Eric Guan and Saim Majid" />
     <link rel="stylesheet" type="text/css" href="assets/css/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Qwigley" rel="stylesheet">
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
 </head> 
-<body  onload="start()" style="background-image: url(images/background.jpg")>
+<body  onload="start()" )>
 	<div id="header">
 	<div id="clock"></div> 
 	<div id="welcome">
@@ -23,14 +26,65 @@
 			<li><a href="#contact">Contact</a></li>
 		</ul>
 	</nav>
+	<div id="authorDisplay"><p></p>
+	</div><div id="quoteDisplay"><p></p>
 	</div>
-	<div id="quoteDisplay">
-
 	</div>
 
+		<style type="text/css">
+		#quoteDisplay p {
+		    opacity: 0;
+		    margin-top: 25px;
+		    font-size: 75px;
+		    font-family: 'Qwigley', cursive;
+		    text-align: center;
+		    color:white;
+		    -webkit-transition: opacity 2s ease-in;
+		    -moz-transition: opacity 2s ease-in;
+		    -o-transition: opacity 2s ease-in;
+		    -ms-transition: opacity 2s ease-in;
+		    transition: opacity 2s ease-in;
+	}
+		#quoteDisplay p.load {
+		   opacity: 1;
+	}
+		#authorDisplay p {
+		    opacity: 0;
+		    margin-top: 0px;
+		    font-size: 50px;
+		    font-family: 'Qwigley', cursive;
+		    text-align: center;
+		    color:white;
+		    -webkit-transition: opacity 2s ease-in;
+		    -moz-transition: opacity 2s ease-in;
+		    -o-transition: opacity 2s ease-in;
+		    -ms-transition: opacity 2s ease-in;
+		    transition: opacity 2s ease-in;
+	}
+		#authorDisplay p.load {
+		   opacity: 1;
+	}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var quotes = ["Eric Guan", "Gandhi", "Mr. Lau", "Daniel Shin", "Edmund Lau"];
+			var randomNumber = Math.floor(Math.random()*(quotes.length));
+			var actualQuote = quotes[randomNumber];
+			var myMap = new Map();
+			myMap.set("Eric Guan", "hi");
+			myMap.set("Gandhi", "hello");
+			myMap.set("Mr. Lau", "oh");
+			myMap.set("Daniel Shin", "yes");
+			myMap.set("Edmund Lau", "yeet");
+			$("#authorDisplay p").text('"                ' + myMap.get(actualQuote) + '            "');
+			$("#authorDisplay p").addClass("load");
+			$("#quoteDisplay p").text(actualQuote);
+			$("#quoteDisplay p").addClass("load");
+
+		});
+	</script>
 	<!-- Scripts -->
 	<script type="text/javascript" src="assets/js/time.js"></script>
-	<script type="text/javascript" src="assets/js/quotes.js"></script>
 
 </body>
 </html>
