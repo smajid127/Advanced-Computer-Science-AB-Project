@@ -8,33 +8,36 @@
     <meta name="author" content="Eric Guan and Saim Majid" />
     <link rel="stylesheet" type="text/css" href="assets/css/home.css">
     <link href="https://fonts.googleapis.com/css?family=Qwigley" rel="stylesheet">
+    <link rel="shorcut icon" type="image/png" href="images/yea.png">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="assets/js/jquery.js"></script>
 </head> 
 <body  onload="start()" )>
+	<!-- <iframe src="https://weatherfor.us/widget?" scrolling="no" frameborder="0" allowtransparency="true" style="background: transparent; width: 720px; height: 250px; overflow: hidden;"></iframe> -->------------
 	<div id="header">
 	<div id="clock"></div> 
 	<div id="welcome">
-		<h1>Welcome Cougar</h1>
+		<h1>Good Morning, Eric</h1>
 	</div> 
 	<nav>
 		<ul>
-			<li><a href="#intro">Intro</a></li>
-			<li><a href="#work">Work</a></li>
-			<li><a href="#about">About</a></li>
+			<li><a href="#todo">To-Do</a></li>
+			<li><a href="#calendar">Calendar</a></li>
+			<li><a href="#news">News</a></li>
 			<li><a href="#contact">Contact</a></li>
 		</ul>
 	</nav>
-	<div id="authorDisplay"><p></p>
-	</div><div id="quoteDisplay"><p></p>
+	<div id="authorDisplay" class="closer"><p></p>
+	</div><div id="quoteDisplay" class="closer"><p></p>
 	</div>
 	</div>
 
 		<style type="text/css">
 		#quoteDisplay p {
 		    opacity: 0;
-		    margin-top: 25px;
+		    margin-top: 50px;
 		    font-size: 75px;
 		    font-family: 'Qwigley', cursive;
 		    text-align: center;
@@ -51,6 +54,7 @@
 		#authorDisplay p {
 		    opacity: 0;
 		    margin-top: 0px;
+		    margin-bottom: -22px;
 		    font-size: 50px;
 		    font-family: 'Qwigley', cursive;
 		    text-align: center;
@@ -62,16 +66,21 @@
 		    transition: opacity 2s ease-in;
 	}
 		#authorDisplay p.load {
+		   margin-top: 50px;
 		   opacity: 1;
 	}
+		.closer{
+			line-height: 15px;
+		}
 	</style>
 	<script type="text/javascript">
 		$(document).ready(function(){
+		//	$("#welcome h1").fadeIn();
 			var quotes = ["Eric Guan", "Gandhi", "Mr. Lau", "Daniel Shin", "Edmund Lau"];
 			var randomNumber = Math.floor(Math.random()*(quotes.length));
 			var actualQuote = quotes[randomNumber];
 			var myMap = new Map();
-			myMap.set("Eric Guan", "hi");
+			myMap.set("Eric Guan", "o narts");
 			myMap.set("Gandhi", "hello");
 			myMap.set("Mr. Lau", "oh");
 			myMap.set("Daniel Shin", "yes");
@@ -83,8 +92,13 @@
 
 		});
 	</script>
+
+	<footer id="footer">
+						<p class="copyright">&copy; CougarSpace. Design: Eric Guan and Saim Majid.</p>
+					</footer>
 	<!-- Scripts -->
 	<script type="text/javascript" src="assets/js/time.js"></script>
+
 
 </body>
 </html>
