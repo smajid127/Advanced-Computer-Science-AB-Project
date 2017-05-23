@@ -1,0 +1,318 @@
+* {margin:0;padding:0;}
+
+body{
+  background:#d2e3ed;
+}
+.wrapper{
+  width:100%;min-height:100%;
+  
+  .align{margin:0 auto;padding:100px 0 100px 0;width:100%;height:100%;}
+  
+  /* To-Do List App */
+  .app{
+    width:360px; min-height:200px;
+    margin:0 auto;
+    
+    border-radius:4px;
+    background:#fff;
+    font-family: 'Noto Sans', sans-serif;
+    text-shadow: 0 0 1px rgba(0,0,0,0.1);
+    
+    box-shadow:0 7px 15px -2px rgba(0,0,0,.07);
+    
+     -moz-user-select: none;
+     -webkit-user-select: none;
+     user-select: none;
+    
+    .info{
+      position:relative;
+      height:140px; width:auto;
+      
+      border-top-left-radius:4px;
+      border-top-right-radius:4px;
+      //linear-gradient(135deg, rgba(15,184,173,.75) -10%, rgba(44,181,232,.75) 130%)
+      background:linear-gradient(135deg, rgba(158, 15, 184, 0.70) -10%, rgba(5, 232, 255, 0.8) 135%), url('https://static.vecteezy.com/system/resources/previews/000/101/253/non_2x/free-abstract-background-1-vector.jpg');
+		  background-size: cover;
+      
+      .date{
+        position:relative;
+        width:100%;padding: 11px 0 5px 0;
+        
+        -moz-user-select: text;
+        -webkit-user-select: text;
+         user-select: text;
+        
+        p#day,p#month{
+          text-align:center;
+          font-size:26px;
+          color:#fff;
+        }
+        p#month{
+          font-size:14px;
+        }
+      }
+      .info-bottom{
+        height:50px;
+        width:85%;position:relative;
+        margin:10px auto 0 auto; 
+        
+        .left{float:left;}
+        .right{float:right;}
+        .middle{width:140px;
+          position: absolute;
+          margin:0 auto;
+          left: 0;
+          right: 0;
+        }
+        
+        #count,#tasks,#count_done,#tasks_done,#remaining_done,#remaining_tasks{
+          margin-top:11px;
+          font-size:18px;
+          color: #fff;
+          font-weight: bold;
+          text-align: center;
+          
+          -moz-user-select: text;
+          -webkit-user-select: text;
+          user-select: text;
+      }
+        #tasks,#tasks_done,#remaining_tasks{font-weight: normal; font-size:14px;margin-top:-5px;}
+      }
+    }
+  
+    ul{
+      height:100%;
+      margin:10px auto 10px auto;
+      
+      #today{width:100%;height:36px;text-align:center;color: #636363;line-height:36px;margin:10px auto;}
+      
+      li{
+        position:relative;
+        display:flex;
+        list-style:none;
+        margin:10px auto;
+        width:90%; min-height:35px;
+        
+        border-bottom:solid 1px #f1f1f1;
+        color:#636363;
+        
+        -webkit-transition: all ease-in-out 0.25s;
+        -moz-transition: all ease-in-out 0.25s;
+        -o-transition: all ease-in-out 0.25s;
+        transition: all ease-in-out 0.25s;  
+        a{
+          width:35px;height: 30px;
+          margin-top:-3px;
+          display:inline-block;
+          color:#636363;
+          text-decoration:none;
+          line-height:31px;
+          i{
+            -webkit-transition: all ease-in-out 0.5s;
+            -moz-transition: all ease-in-out 0.5s;
+            -o-transition: all ease-in-out 0.5s;
+            transition: all ease-in-out 0.5s;  
+            
+            margin-left:7px;
+            margin-top:-1px;
+            
+            font-size:20px;
+            font-weight:bold;  
+            &.mark{color:#744bc0;}
+            &.mark-alt{color:#636363;}
+          }
+        }
+        a:hover > i {color:#744bc0;}
+        
+        .right{
+          width:80%;height:100%;display:inline-block;margin: -3px auto 0 auto;
+          
+          p{
+            width:90%;height:28px;
+            display:inline-block;
+            word-wrap: break-word;
+            line-height: 28px;
+            outline:none;
+            margin:0;
+            
+            font-size:15px;
+            font-weight:bold;
+            
+            -webkit-transition: all ease-in-out 0.25s;
+            -moz-transition: all ease-in-out 0.25s;
+            -o-transition: all ease-in-out 0.25s;
+            transition: all ease-in-out 0.25s;
+            
+            span{cursor:text}
+            
+            &.line-through {
+              color:#b3b3b3;
+              text-decoration:line-through;
+              font-style:italic;
+              margin-left:7px;
+            }
+          }
+        }
+        
+        span{
+          display:inline-block;
+          width:35px; height:30px;
+          line-height: 31px;
+          cursor:pointer;
+          margin-top: -3px;
+          i{
+            -webkit-transition: all ease-in-out 0.25s;
+            -moz-transition: all ease-in-out 0.25s;
+            -o-transition: all ease-in-out 0.25s;
+            transition: all ease-in-out 0.25s;  
+            font-size:20px;
+            margin-left: 7px;
+            margin-top: -1px;
+          }
+        }
+        span:hover > i{color:rgba(36, 181, 226,1);}
+      }
+      li:last-child{
+        border-bottom:solid 1px transparent;
+      }
+    }
+    
+    .bottom{
+      height:70px; width:auto;
+      
+      a{
+        width:150px; height:40px;
+        line-height:40px;
+        display:block;
+        margin:0 auto;
+        
+        font-size:14px;
+        background:linear-gradient(135deg, rgba(158, 15, 184, 0.9) -20%, rgba(5, 232, 255, 0.9) 125%);
+        color:#fff;
+        border-radius:5px;
+        text-decoration:none;
+        text-align:center;
+        
+        i{margin-right:5px;}
+      }
+      a:hover{
+        background:linear-gradient(135deg, rgba(158, 15, 184, 0.8) -20%, rgba(5, 232, 255, 0.8) 125%);
+      }
+      
+      #undo{
+        border-radius:100px;
+        width:30px;height:30px;
+        display:inline-block;    
+        float: right;
+        line-height:30px;
+        opacity:0;
+        cursor:default;
+        
+        margin-top:-35px;
+        margin-right:21px;
+        
+        pointer-events: none;
+        
+        i{margin-left:5px;}
+          
+      }
+    }
+  }
+  /* End To-Do List App */
+}
+
+.down{
+	-webkit-animation: slide_down .4s;
+	-moz-animation: slide_down .4s;
+	-o-animation: slide_down .4s;
+	animation: slide_down .4s;
+}
+@keyframes slide_down {
+  0%   {
+    opacity:0;
+    transform: translate(0,0);
+    margin-top:-41px;
+    transform:scale(0);
+		}
+  20%   {
+    opacity:0;
+		}
+  80%{
+    transform:scale(1.05);
+  }
+  100% {
+		opacity:1;
+		transform: translate(0,0);
+    margin-top:10px;
+    transform:scale(1);		
+		}
+}
+
+.up{
+	-webkit-animation: slide_up .6s;
+	-moz-animation: slide_up .6s;
+	-o-animation: slide_up .6s;
+	animation: slide_up .6s;
+}
+@keyframes slide_up {
+  0%   {
+		opacity:1;
+		transform: translate(0,0);
+    margin-top:10px;
+    transform:scale(1);		
+  }
+  30%{
+    opacity:0;
+  }
+  100% {
+    opacity:0;
+    transform: translate(0,0);
+    margin-top:-45px;
+    transform:scale(0);		
+		}
+}
+
+.pop_in{
+  pointer-events: all !important;
+  cursor:pointer !important;
+  opacity:1 !important;
+	-webkit-animation: pop_in .25s;
+	-moz-animation: pop_in .25s;
+	-o-animation: pop_in .25s;
+	animation: pop_in .25s;
+}
+@keyframes pop_in {
+  0%   {
+		opacity:0;
+    transform:scale(0);		
+  }
+  80%{
+    transform:scale(1.15);	
+  }
+  100% {
+    opacity:1;
+    transform:scale(1);		
+		}
+}
+.pop_out{
+  pointer-events: none;
+  cursor:default !important;
+  opacity:0 !important;
+	-webkit-animation: pop_out .25s;
+	-moz-animation: pop_out .25s;
+	-o-animation: pop_out .25s;
+	animation: pop_out .25s;
+}
+@keyframes pop_out {
+  0%   {
+		opacity:1;
+    transform:scale(1);		
+  }
+  80%{
+    transform:scale(1.15);	
+  }
+  100% {
+    opacity:0;
+    transform:scale(1);		
+		}
+}

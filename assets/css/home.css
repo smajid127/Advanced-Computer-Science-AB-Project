@@ -1,20 +1,53 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
-
+iframe{
+    float:right;
+    position:relative;
+}
+#quoteDisplay p {
+            opacity: 0;
+            margin-top: 25px;
+            font-size: 21px;
+            text-align: center;
+            -webkit-transition: opacity 2s ease-in;
+            -moz-transition: opacity 2s ease-in;
+            -o-transition: opacity 2s ease-in;
+            -ms-transition: opacity 2s ease-in;
+            transition: opacity 2s ease-in;
+    }
+        #quoteDisplay p.load {
+           opacity: 1;
+}
+#authorDisplay p {
+            opacity: 0;
+            margin-top: 25px;
+            font-size: 21px;
+            text-align: center;
+            -webkit-transition: opacity 2s ease-in;
+            -moz-transition: opacity 2s ease-in;
+            -o-transition: opacity 2s ease-in;
+            -ms-transition: opacity 2s ease-in;
+            transition: opacity 2s ease-in;
+    }
+        #authorDisplay p.load {
+           opacity: 1;
+}
 #clock{
     text-align: center;
     color: white;
-    font-size: 500%;
-	margin: 112px 0px 0px 0px;
+    font-size: 650%;
+    font-weight: normal;
+	margin: 160px 0px -55px 0px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
 }
 #welcome{
     text-align: center;
     color: white;
     font-size: 150%;
-    margin: 0px 0px 0px 0px;
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    margin: 50px 0px 0px 0px;
+   /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+   font-family: 'Source Sans Pro', sans-serif;
 } 
 body{
     background-size:100%;
@@ -38,7 +71,7 @@ nav{
             justify-content: center;
             list-style-type: none;
             margin-bottom: 0;
-            margin-top: 150px;
+            margin-top: 20px; 
             list-style: none;
             padding-left: 0;
             padding: 0;
@@ -73,7 +106,7 @@ nav{
                 }
 
                     #header nav ul li a:hover {
-                        background-color: rgba(255, 255, 255, 0.075);
+                        background-color: rgba(192,192,193,0.3); 
                     }
 
                     #header nav ul li a:active {
@@ -94,6 +127,27 @@ nav{
         #header nav.use-middle ul li.is-middle {
             border-left: 0;
         }
+         #footer {
+            -moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+            -webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+            -ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+            transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+            width: 100%;
+            max-width: 100%;
+            margin-top: 2rem;
+            text-align: center;
+            color:white;
+        }
+        #footer .copyright {
+            letter-spacing: 0.2rem;
+            font-size: 0.6rem;
+            opacity: 0.75;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            color:white;
+        }
+
+
 
 .morning { 
     background: url("images/morning.jpg");
