@@ -5,6 +5,15 @@ iframe{
     float:right;
     position:relative;
 }
+#makeThisWhite{
+    color:white;
+    text-decoration: underline;
+}
+#weather{
+    float:right;
+    clear: left;
+    position: absolute;
+}
 #quoteDisplay p {
             opacity: 0;
             margin-top: 25px;
@@ -56,6 +65,7 @@ body{
     background-size:100% 100vh;
     font-family:Verdana, Geneva, sans-serif;
 } 
+/* navbar */
 nav{
     display: block;
     text-align: center;
@@ -66,7 +76,7 @@ nav{
         #header nav ul {
             display: -moz-flex;
             display: -webkit-flex;
-            display: -ms-flex;
+            display: -ms-flex;  
             display: flex;
             justify-content: center;
             list-style-type: none;
@@ -101,7 +111,7 @@ nav{
                     letter-spacing: 0.2rem;
                     font-size: 0.8rem;
                     border-bottom: 0;
-                    color:white;
+                    color: white;
                     text-decoration-color: white:;
                 }
 
@@ -127,28 +137,30 @@ nav{
         #header nav.use-middle ul li.is-middle {
             border-left: 0;
         }
-         #footer {
-            -moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-            -webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-            -ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-            transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-            width: 100%;
-            max-width: 100%;
-            margin-top: 2rem;
-            text-align: center;
-            color:white;
-        }
-        #footer .copyright {
-            letter-spacing: 0.2rem;
-            font-size: 0.6rem;
-            opacity: 0.75;
-            margin-bottom: 0;
-            text-transform: uppercase;
-            color:white;
-        }
+        
+/* footer */
+ #footer {
+    -moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+    -webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+    -ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+    transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+    color:white;
+}
+/*Copyright*/
+#footer .copyright {
+    letter-spacing: 0.2rem;
+    font-size: 0.6rem;
+    opacity: 0.75;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color:white;
+}
 
-
-
+/* Testing add class to a button then changing background */
 .morning { 
     background: url("images/morning.jpg");
      } 
