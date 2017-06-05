@@ -10,12 +10,16 @@
     <link href="https://fonts.googleapis.com/css?family=Qwigley" rel="stylesheet">
     <link rel="shorcut icon" type="image/png" href="images/yea.png">
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="assets/js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/modal.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head> 
 <body  onload="start()" )>
-	<!-- <iframe src="https://weatherfor.us/widget?" scrolling="no" frameborder="0" allowtransparency="true" style="background: transparent; width: 720px; height: 250px; overflow: hidden;"></iframe> -->------------
+	<!-- <iframe src="https://weatherfor.us/widget?" scrolling="no" frameborder="0" allowtransparency="true" style="background: transparent; width: 720px; height: 250px; overflow: hidden;"></iframe> -->
+
+</div>
 	<div id="header">
 	<div id="clock"></div> 
 	<div id="welcome">
@@ -26,14 +30,39 @@
 			<li><a href="#todo">To-Do</a></li>
 			<li><a href="#calendar">Calendar</a></li>
 			<li><a href="#news">News</a></li>
-			<li><a href="#contact">Contact</a></li>
+			<li><a href="#about">About</a></li>
 		</ul>
 	</nav>
 	<div id="authorDisplay" class="closer"><p></p>
 	</div><div id="quoteDisplay" class="closer"><p></p>
 	</div>
 	</div>
-
+	<div id="todo" class="todoDialog" style="border:4px white;">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	  <div class="container" style="border:4px white;">
+	    <a href="#close" title="Close" class="close">X</a>
+	  	<h2>To Do List</h2>
+         <p ><em>Click and drag to reorder, double click to cross an item off.</em></p>
+    		 <form name="toDoList" id="target">
+    		  	<input type="text" name="ListItem"/>
+    		 </form>
+		  <div id="button">Add</div>
+		  <br/>
+		  <ol></ol>
+    </div>
+	</div>
+	<div id="about" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Cougar Space</h2>
+			<p>Cougar Space is a collaborative learning project by Eric Guan and Saim Majid that seeks to provide the same functionality that applications such as momentum provide, but for the Oakton High School student population.</p>
+			<p>The current website is a work in progress and is in the alpha testing stage, however at the moment it has a suite of features such as a to-do list, weather display, OHS news, and a calendar with tasts. The entire site was built using HTML/CSS/Javascript. As development continues, expect more features to be added! Find the project <a href="https://github.com/ericzgy/Advanced-Computer-Science-AB-Project" id="makeThisWhite">here</a>.</p>
+		</div>
+	</div>
+	<script>
+		$('#about').modal(); 
+	</script>
+	</div>
 		<style type="text/css">
 		#quoteDisplay p {
 		    opacity: 0;
@@ -76,15 +105,21 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 		//	$("#welcome h1").fadeIn();
-			var quotes = ["Eric Guan", "Gandhi", "Mr. Lau", "Daniel Shin", "Edmund Lau"];
+			var quotes = ["Eric Guan", "Gandhi", "Mr. Lau", "Daniel Shin", "Edmund Lau", "Robin Williams", "Buddha", "Maya Angelou", "Steve Jobs", "Daniel Liu", "Mr. Edmund Lau"];
 			var randomNumber = Math.floor(Math.random()*(quotes.length));
 			var actualQuote = quotes[randomNumber];
 			var myMap = new Map();
-			myMap.set("Eric Guan", "o narts");
-			myMap.set("Gandhi", "hello");
-			myMap.set("Mr. Lau", "oh");
-			myMap.set("Daniel Shin", "yes");
-			myMap.set("Edmund Lau", "yeet");
+			myMap.set("Eric Guan", "We make a living by what we get, but we make a life by what we give");
+			myMap.set("Gandhi", "Whatever you do may seem insignificant to you, but it is most important that you do it");
+			myMap.set("Mr. Lau", "See me please");
+			myMap.set("Daniel Shin", "Life is like a butt - grasp it while you can");
+			myMap.set("Edmund Lau", "It's very doable");
+			myMap.set("Robin Williams", "No matter what people tell you, words and ideas can change the world");
+			myMap.set("Buddha", "No one saves us but ourselves");
+			myMap.set("Maya Angelou", "A bird doesn't sing because it has an answer, it sings because it has a song");
+			myMap.set("Steve Jobs", "Don't let the noise of other's opinions drown out your own inner voice");
+			myMap.set("Mr. Edmund Lau", "Can do better");
+			myMap.set("Daniel Liu", "In the waves of change we find our direction");
 			$("#authorDisplay p").text('"                ' + myMap.get(actualQuote) + '            "');
 			$("#authorDisplay p").addClass("load");
 			$("#quoteDisplay p").text(actualQuote);
@@ -95,9 +130,12 @@
 
 	<footer id="footer">
 						<p class="copyright">&copy; CougarSpace. Design: Eric Guan and Saim Majid.</p>
-					</footer>
+	</footer>
+	<!-- weather widget start -->
+<div id="weather"> 
+		<!-- weather widget start <div id="m-booked-small-t3-66356"> <div class="booked-weather-160x36 w160x36-18" style="color:#ffffff; border-radius:4px; -moz-border-radius:4px; border:none"> <a target="_blank" style="color:#ffffff;" href="http://www.booked.net/weather/alexandria-1040" class="booked-weather-160x36-city">Alexandria</a> <a target="_blank" class="booked-weather-160x36-right" href="http://www.booked.net/"><img src="//s.bookcdn.com/images/letter/s5.gif" alt="http://www.booked.net" /></a> <div class="booked-weather-160x36-degree"><span class="plus">+</span>18&deg;<span>C</span></div> </div> </div><script type="text/javascript"> var css_file=document.createElement("link"); css_file.setAttribute("rel","stylesheet"); css_file.setAttribute("type","text/css"); css_file.setAttribute("href",'https://s.bookcdn.com/css/w/bw-160-36.css?v=0.0.1'); document.getElementsByTagName("head")[0].appendChild(css_file); function setWidgetData(data) { if(typeof(data) != 'undefined' && data.results.length > 0) { for(var i = 0; i < data.results.length; ++i) { var objMainBlock = document.getElementById('m-booked-small-t3-66356'); if(objMainBlock !== null) { var copyBlock = document.getElementById('m-bookew-weather-copy-'+data.results[i].widget_type); objMainBlock.innerHTML = data.results[i].html_code; if(copyBlock !== null) objMainBlock.appendChild(copyBlock); } } } else { alert('data=undefined||data.results is empty'); } } </script> <script type="text/javascript" charset="UTF-8" src="https://widgets.booked.net/weather/info?action=get_weather_info&ver=6&cityID=1040&type=13&scode=124&ltid=3458&domid=w209&anc_id=97746&cmetric=1&wlangID=1&color=fff5d9&wwidth=158&header_color=fff5d9&text_color=ffffff&link_color=ffffff&border_form=3&footer_color=fff5d9&footer_text_color=333333&transparent=1"></script> weather widget end --> 
 	<!-- Scripts -->
-	<script type="text/javascript" src="assets/js/time.js"></script>
+	<script type="text/javascript" src="assets/js/util.js"></script>
 
 
 </body>
