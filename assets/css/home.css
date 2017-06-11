@@ -5,6 +5,12 @@ iframe{
     float:right;
     position:relative;
 }
+h1{
+    font-size: 47.5px;
+    margin: 20px 0px 0px 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
 #makeThisWhite{
     color:white;
     text-decoration: underline;
@@ -16,7 +22,7 @@ iframe{
 }
 #quoteDisplay p {
             opacity: 0;
-            margin-top: 25px;
+            margin-top: 40px;
             font-size: 21px;
             text-align: center;
             -webkit-transition: opacity 2s ease-in;
@@ -40,21 +46,24 @@ iframe{
             transition: opacity 2s ease-in;
     }
         #authorDisplay p.load {
-           opacity: 1;
+           opacity: 1;2
+}
+#quoteContainer{
+            margin-top:55px;
 }
 #clock{
     text-align: center;
     color: white;
     font-size: 650%;
     font-weight: normal;
-	margin: 160px 0px -55px 0px;
+    margin: 115px 0px -55px 0px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
 }
 #welcome{
     text-align: center;
     color: white;
     font-size: 150%;
-    margin: 50px 0px 0px 0px;
+    margin: 32px 0px 0px 0px;
    /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
    font-family: 'Source Sans Pro', sans-serif;
 } 
@@ -65,6 +74,50 @@ body{
     background-size:100% 100vh;
     font-family:Verdana, Geneva, sans-serif;
 } 
+html{
+min-height: 100%;
+}
+/* Calendar */
+#calendar
+{
+    width: 900px;
+    margin: 0 auto;
+    z-index: 9999;
+}
+
+#backbtn{
+    margin-bottom: 10px;
+    margin-right: 420px;
+    margin-left: 234px;
+    margin-top: 4px; 
+}
+/*feed*/
+ #backbtn2{
+    position: relative;
+    margin-bottom: 10px;
+    margin-top:4px;
+    margin-left:383px;
+    text-align: center;
+}
+#twitter{
+    display:none;
+    position: relative;
+    bottom: 700px;
+    z-index: 9999;
+}
+#feed{
+    display: block;
+    height: 500px;
+    width: 600px;
+    bottom: 545px;
+    margin-left: auto;
+    margin-right: auto;
+   /* position: absolute; */
+    z-index: 9999;
+}
+.timeline-Widget{
+    visibility: hidden;
+}
 /* navbar */
 nav{
     display: block;
@@ -72,6 +125,7 @@ nav{
     position:relative; 
     left: 337px; 
     width:50%;
+    margin-top:35px;
 }
         #header nav ul {
             display: -moz-flex;
@@ -91,7 +145,10 @@ nav{
         }
 
             #header nav ul li {
-                padding-left: 0;
+                padding-left: 7px;
+                padding-right: 7px;
+                padding-top: 2px;
+                padding-bottom: 2px;
                 border-left: solid 1px #ffffff;
                 display:inline;
                 color:white;
@@ -143,10 +200,10 @@ nav{
     -moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
     -webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
     -ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
-    transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+    transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out; 
     width: 100%;
     max-width: 100%;
-    margin-top: 2rem;
+    margin-top: 120px;
     text-align: center;
     color:white;
 }
@@ -156,6 +213,7 @@ nav{
     font-size: 0.6rem;
     opacity: 0.75;
     margin-bottom: 0;
+    margin-top: 108px;
     text-transform: uppercase;
     color:white;
 }

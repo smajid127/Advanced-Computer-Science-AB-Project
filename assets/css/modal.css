@@ -46,6 +46,7 @@
     transition: opacity 400ms ease-in;
     pointer-events: none;
     border: 10px white !important; 
+
 }
 .todoDialog:target {
     opacity:1;
@@ -62,6 +63,12 @@
     color:white;
     margin-top:5px;
     margin-left: 5px;
+}
+h2{
+    cursor:move;
+}
+.todoDialog-open {
+    overflow: scroll;
 }
 /* The Close Button */
 .close {
