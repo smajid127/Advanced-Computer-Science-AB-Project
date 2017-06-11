@@ -49,9 +49,9 @@ body .fc { /* extra precedence to overcome jqui */
 	color: #666;
 }
 
-.fc-unthemed td.fc-today {
+/*.fc-unthemed td.fc-today {
 	background: #fcf8e3;
-}
+} */
 
 .fc-highlight { /* when user is selecting cells */
 	background: #bce8f1;
@@ -393,6 +393,7 @@ hr.fc-divider {
 	border-width: 1px;
 	padding: 0;
 	vertical-align: top;
+	color:white;
 }
 
 .fc td.fc-today {
@@ -840,6 +841,7 @@ a.fc-more:hover {
 
 .fc-toolbar .fc-center {
 	display: inline-block;
+	color:white;
 }
 
 /* the things within each left/right/center section */
@@ -981,7 +983,7 @@ a.fc-more:hover {
 .fc-agenda-view .fc-day-grid {
 	position: relative;
 	z-index: 2; /* so the "more.." popover will be over the time grid */
-}
+} 
 
 .fc-agenda-view .fc-day-grid .fc-row {
 	min-height: 3em; /* all-day section will never get shorter than this */
@@ -1003,6 +1005,7 @@ a.fc-more:hover {
 
 .fc-ltr .fc-axis {
 	text-align: right;
+	/*background-color:#262626;*/
 }
 
 .fc-rtl .fc-axis {

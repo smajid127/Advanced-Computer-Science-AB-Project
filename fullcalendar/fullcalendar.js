@@ -87,49 +87,10 @@
 				*/
 				events: [
 					{
-						title: 'All Day Event',
-						start: new Date(y, m, 1)
-					},
-					{
-						title: 'Long Event',
-						start: new Date(y, m, d-5),
-						end: new Date(y, m, d-2)
-					},
-					{
-						id: 999,
-						title: 'Repeating Event',
-						start: new Date(y, m, d-3, 16, 0),
+						title: 'Demo Event',
+						start: new Date(y, m, d-1, 9, 30),
 						allDay: false
 					},
-					{
-						id: 999,
-						title: 'Repeating Event',
-						start: new Date(y, m, d+4, 16, 0),
-						allDay: false
-					},
-					{
-						title: 'Meeting',
-						start: new Date(y, m, d, 10, 30),
-						allDay: false
-					},
-					{
-						title: 'Lunch',
-						start: new Date(y, m, d, 12, 0),
-						end: new Date(y, m, d, 14, 0),
-						allDay: false
-					},
-					{
-						title: 'Birthday Party',
-						start: new Date(y, m, d+1, 19, 0),
-						end: new Date(y, m, d+1, 22, 30),
-						allDay: false
-					},
-					{
-						title: 'Click for Google',
-						start: new Date(y, m, 28),
-						end: new Date(y, m, 29),
-						url: 'http://google.com/'
-					}
 				]
 			});
 			
@@ -6096,19 +6057,19 @@ Grid.mixin({
 
 	// Queries for caller-specified color, then falls back to default
 	getSegBackgroundColor: function(seg) {
-		return seg.event.backgroundColor ||
+		return "#262626";/*seg.event.backgroundColor ||
 			seg.event.color ||
-			this.getSegDefaultBackgroundColor(seg);
+			this.getSegDefaultBackgroundColor(seg);*/
 	},
 
 
 	getSegDefaultBackgroundColor: function(seg) {
 		var source = seg.event.source || {};
 
-		return source.backgroundColor ||
+		return "#050505";/* source.backgroundColor ||
 			source.color ||
 			this.view.opt('eventBackgroundColor') ||
-			this.view.opt('eventColor');
+			this.view.opt('eventColor'); */
 	},
 
 
@@ -6123,10 +6084,10 @@ Grid.mixin({
 	getSegDefaultBorderColor: function(seg) {
 		var source = seg.event.source || {};
 
-		return source.borderColor ||
+		return "white";/*source.borderColor ||
 			source.color ||
 			this.view.opt('eventBorderColor') ||
-			this.view.opt('eventColor');
+			this.view.opt('eventColor');*/
 	},
 
 
@@ -12595,7 +12556,7 @@ Calendar.defaults = {
 
 	// display
 	defaultView: 'month',
-	aspectRatio: 1.35,
+	aspectRatio: 2,
 	header: {
 		left: 'title',
 		center: '',
