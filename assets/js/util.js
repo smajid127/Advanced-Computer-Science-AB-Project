@@ -44,12 +44,13 @@ $('#todo').one('click',function(){
                 var toAdd = $('input[name=ListItem]').val();
                  $('ol').append('<li>' + toAdd + '</li>');
             });
-       
-       $("input[name=ListItem]").keyup(function(event){
-          if(event.keyCode == 13){
-            $("#button").click();
-          }         
-      });
+
+      $(document).keypress(function(e) {
+    if(e.which == 13) {
+    	e.preventDefault();
+        $("#button").click();
+    }
+	});
       
       $(document).on('dblclick','li', function(){
         $(this).toggleClass('strike').fadeOut('slow');    
