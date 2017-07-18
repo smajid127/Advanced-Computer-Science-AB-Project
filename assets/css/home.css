@@ -1,20 +1,71 @@
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
-
+iframe{
+    float:right;
+    position:relative;
+}
+h1{
+    font-size: 47.5px;
+    margin: 20px 0px 0px 0px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+#makeThisWhite{
+    color:white;
+    text-decoration: underline;
+}
+#weather{
+    float:right;
+    clear: left;
+    position: absolute;
+}
+#quoteDisplay p {
+            opacity: 0;
+            margin-top: 40px;
+            font-size: 21px;
+            text-align: center;
+            -webkit-transition: opacity 2s ease-in;
+            -moz-transition: opacity 2s ease-in;
+            -o-transition: opacity 2s ease-in;
+            -ms-transition: opacity 2s ease-in;
+            transition: opacity 2s ease-in;
+    }
+        #quoteDisplay p.load {
+           opacity: 1;
+}
+#authorDisplay p {
+            opacity: 0;
+            margin-top: 25px;
+            font-size: 21px;
+            text-align: center;
+            -webkit-transition: opacity 2s ease-in;
+            -moz-transition: opacity 2s ease-in;
+            -o-transition: opacity 2s ease-in;
+            -ms-transition: opacity 2s ease-in;
+            transition: opacity 2s ease-in;
+    }
+        #authorDisplay p.load {
+           opacity: 1;2
+}
+#quoteContainer{
+            margin-top:55px;
+}
 #clock{
     text-align: center;
     color: white;
-    font-size: 500%;
-	margin: 112px 0px 0px 0px;
+    font-size: 650%;
+    font-weight: normal;
+    margin: 115px 0px -55px 0px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
 }
 #welcome{
     text-align: center;
     color: white;
     font-size: 150%;
-    margin: 0px 0px 0px 0px;
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    margin: 32px 0px 0px 0px;
+   /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+   font-family: 'Source Sans Pro', sans-serif;
 } 
 body{
     background-size:100%;
@@ -23,22 +74,68 @@ body{
     background-size:100% 100vh;
     font-family:Verdana, Geneva, sans-serif;
 } 
+html{
+min-height: 100%;
+}
+/* Calendar */
+#calendar
+{
+    width: 900px;
+    margin: 0 auto;
+    z-index: 9999;
+}
+
+#backbtn{
+    margin-bottom: 10px;
+    margin-right: 420px;
+    margin-left: 234px;
+    margin-top: 4px; 
+}
+/*feed*/
+ #backbtn2{
+    position: relative;
+    margin-bottom: 10px;
+    margin-top:4px;
+    margin-left:383px;
+    text-align: center;
+}
+#twitter{
+    display:none;
+    position: relative;
+    bottom: 700px;
+    z-index: 9999;
+}
+#feed{
+    display: block;
+    height: 500px;
+    width: 600px;
+    bottom: 545px;
+    margin-left: auto;
+    margin-right: auto;
+   /* position: absolute; */
+    z-index: 9999;
+}
+.timeline-Widget{
+    visibility: hidden;
+}
+/* navbar */
 nav{
     display: block;
     text-align: center;
     position:relative; 
     left: 337px; 
     width:50%;
+    margin-top:35px;
 }
         #header nav ul {
             display: -moz-flex;
             display: -webkit-flex;
-            display: -ms-flex;
+            display: -ms-flex;  
             display: flex;
             justify-content: center;
             list-style-type: none;
             margin-bottom: 0;
-            margin-top: 150px;
+            margin-top: 20px; 
             list-style: none;
             padding-left: 0;
             padding: 0;
@@ -48,7 +145,10 @@ nav{
         }
 
             #header nav ul li {
-                padding-left: 0;
+                padding-left: 7px;
+                padding-right: 7px;
+                padding-top: 2px;
+                padding-bottom: 2px;
                 border-left: solid 1px #ffffff;
                 display:inline;
                 color:white;
@@ -68,12 +168,12 @@ nav{
                     letter-spacing: 0.2rem;
                     font-size: 0.8rem;
                     border-bottom: 0;
-                    color:white;
+                    color: white;
                     text-decoration-color: white:;
                 }
 
                     #header nav ul li a:hover {
-                        background-color: rgba(255, 255, 255, 0.075);
+                        background-color: rgba(192,192,193,0.3); 
                     }
 
                     #header nav ul li a:active {
@@ -94,7 +194,31 @@ nav{
         #header nav.use-middle ul li.is-middle {
             border-left: 0;
         }
+        
+/* footer */
+ #footer {
+    -moz-transition: -moz-transform 0.325s ease-in-out, -moz-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+    -webkit-transition: -webkit-transform 0.325s ease-in-out, -webkit-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+    -ms-transition: -ms-transform 0.325s ease-in-out, -ms-filter 0.325s ease-in-out, opacity 0.325s ease-in-out;
+    transition: transform 0.325s ease-in-out, filter 0.325s ease-in-out, opacity 0.325s ease-in-out; 
+    width: 100%;
+    max-width: 100%;
+    margin-top: 120px;
+    text-align: center;
+    color:white;
+}
+/*Copyright*/
+#footer .copyright {
+    letter-spacing: 0.2rem;
+    font-size: 0.6rem;
+    opacity: 0.75;
+    margin-bottom: 0;
+    margin-top: 108px;
+    text-transform: uppercase;
+    color:white;
+}
 
+/* Testing add class to a button then changing background */
 .morning { 
     background: url("images/morning.jpg");
      } 

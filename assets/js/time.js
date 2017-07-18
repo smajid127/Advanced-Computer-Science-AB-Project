@@ -18,6 +18,9 @@
 	  //Else night2 theme is used 
 	  document.body.className = "night2"; 
 }); */
+$(document).ready(function(){
+	$("#welcome").fadeIn();
+});
 function startTime() {
     var today = new Date();
     var h = today.getHours()%12||12;
@@ -31,22 +34,24 @@ function checkTime(i) {
     if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
     return i;
 } 
-function background(){
-	var d = new Date();
+function background()
+{	var d = new Date();
 	var n = d.getHours();
 	if (n > 8 && n <= 12)
-		document.body.style.backgroundImage = "url('images/morning.jpg')";	
+		document.body.style.backgroundImage = "url('images/afternoon2.jpg')";	
 	else if (n > 12 && n <= 16)
-		document.body.style.backgroundImage = "url('images/afternoon.jpg')";
+		document.body.style.backgroundImage = "url('images/Afternoon.jpg')";
 	else if (n > 16 && n <= 19) 	
-		document.body.style.backgroundImage = "url('images/night1.jpg')";
+		document.body.style.backgroundImage = "url('images/background.jpg')";
 	else if(n > 19 && n <= 22)
-		document.body.style.backgroundImage = "url('images/night3.jpg')";
-	else
 		document.body.style.backgroundImage = "url('images/night2.jpg')";
+	else if((n>22&&n<=24)||(n>=0&&n<=4))
+		document.body.style.backgroundImage = "url('images/night.jpg')";
+	else
+		document.body.style.backgroundImage = "url('images/day.jpg')";
 } 
 function start(){
 	startTime();
-	//background();
+	background();
 	//startTime();
 }

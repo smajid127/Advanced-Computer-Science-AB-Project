@@ -3,34 +3,187 @@
 <head>
 	<title>Cougar Space</title>
 	<meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <meta name="description" content = "CS AB Final Project" /> 
-    <meta name="author" content="Eric Guan and Saim Majid" />
-    <link rel="stylesheet" type="text/css" href="assets/css/home.css">
-    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-</head> 
-<body  onload="start()" style="background-image: url(images/background.jpg")>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content = "CS AB Final Project" /> 
+	<meta name="author" content="Eric Guan and Saim Majid" />
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/home.css">
+	<link href="https://fonts.googleapis.com/css?family=Qwigley" rel="stylesheet">
+    <link rel="shorcut icon" type="image/png" href="images/yea.png">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="assets/css/modal.css"> 
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<link rel="stylesheet" href="fullcalendar/fullcalendar.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src='lib/moment.min.js'></script>
+	<script src='fullcalendar/fullcalendar.js'></script> 
+
+</head>
+
+<body  onload="start()">
+
+	</div>
 	<div id="header">
 	<div id="clock"></div> 
 	<div id="welcome">
-		<h1>Welcome Cougar</h1>
+		<h1>Good Morning, Eric</h1>
 	</div> 
+	<!-- navbar begins -->
 	<nav>
 		<ul>
-			<li><a href="#intro">Intro</a></li>
-			<li><a href="#work">Work</a></li>
+			<li><a href="#todo">To-Do</a></li>
+			<li><a href="#agenda">Calendar</a></li>
+			<li><a href="#news">News</a></li>
 			<li><a href="#about">About</a></li>
-			<li><a href="#contact">Contact</a></li>
 		</ul>
 	</nav>
+	<!-- end navbar -->
+	<!-- quote display -->
+	<div id="quoteContainer">
+	<div id="authorDisplay" class="closer"><p></p>
+	</div><div id="quoteDisplay" class="closer"><p></p>
 	</div>
-	<div id="quoteDisplay">
-
 	</div>
+	</div>
+	<!-- end quote display -->
+	<!-- to do list begins -->
+	<div id="todo" class="todoDialog" style="border:4px white; overflow: hidden"">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+	  <div class="container" style="border:4px white;">
+	    <a href="#close" title="Close" class="close">X</a>
+	  	<h2>To Do List</h2>
+         <p ><em>Click and drag to reorder, double click to cross an item off.</em></p>
+    		 <form name="toDoList" id="target">
+    		  	<input type="text" name="ListItem"/>
+    		 </form>
+		  <div id="button">Add</div>
+		  <br/>
+		  <ol></ol>
+    </div>
+	</div>
+	<script>
+	$("#todo").draggable();
+	$("#todo").css("overflow", "hidden");
+	$("#todo").css("overflow", "auto");
+	</script>
+	<!--  to do list ends  -->
 
-	<!-- Scripts -->
-	<script type="text/javascript" src="assets/js/time.js"></script>
-	<script type="text/javascript" src="assets/js/quotes.js"></script>
+		<!-- about begins -->
+	<div id="about" class="modalDialog">
+		<div>
+			<a href="#close" title="Close" class="close">X</a>
+			<h2>Cougar Space</h2>
+			<p>Cougar Space is a collaborative learning project by Eric Guan and Saim Majid that seeks to provide the same functionality that applications such as momentum provide, but for the Oakton High School student population.</p>
+			<p>The current website is a work in progress, however at the moment it has a suite of features such as a to-do list, weather display, OHS news, and a calendar with tasts. The entire site was built using HTML/CSS/Javascript. As development continues, expect more features to be added! Find the project <a href="https://github.com/ericzgy/Advanced-Computer-Science-AB-Project" id="makeThisWhite">here</a>.</p>
+		</div>
+	</div>
+	<script>
+		$('#about').modal(); 
+// Get the modal
+		var modal = document.getElementById('about');
+
+// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+    	if (event.target == modal) {
+       	 	modal.style.display = "none";
+    }
+}
+	</script>
+	</div>
+	<!-- about ends -->
+		<style type="text/css">
+		#quoteDisplay p {
+		    opacity: 0;
+		    margin-top: 50px;
+		    font-size: 75px;
+		    font-family: 'Qwigley', cursive;
+		    text-align: center;
+		    color:white;
+		    -webkit-transition: opacity 2.5s ease-in;
+		    -moz-transition: opacity 2.5s ease-in;
+		    -o-transition: opacity 2.5s ease-in;
+		    -ms-transition: opacity 2.5s ease-in;
+		    transition: opacity 2.5s ease-in;
+	}
+		#quoteDisplay p.load {
+		   opacity: 1;
+	}
+		#authorDisplay p {
+		    opacity: 0;
+		    margin-top: 0px;
+		    margin-bottom: -22px;
+		    font-size: 50px;
+		    font-family: 'Qwigley', cursive;
+		    text-align: center;
+		    color:white;
+		    -webkit-transition: opacity 2.5s ease-in;
+		    -moz-transition: opacity 2.5s ease-in;
+		    -o-transition: opacity 2.5s ease-in;
+		    -ms-transition: opacity 2.5s ease-in;
+		    transition: opacity 2.5s ease-in;
+	}
+		#authorDisplay p.load {
+		   margin-top: 50px;
+		   opacity: 1;
+	}
+		.closer{
+			line-height: 15px;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		//	$("#welcome h1").fadeIn();
+			var quotes = ["Eric Guan", "Gandhi", "Mr. Lau", "Daniel Shin", "Edmund Lau", "Robin Williams", "Buddha", "Maya Angelou", "Steve Jobs", "Daniel Liu", "Mr. Edmund Lau"];
+			var randomNumber = Math.floor(Math.random()*(quotes.length));
+			var actualQuote = quotes[randomNumber];
+			var myMap = new Map();
+			myMap.set("Eric Guan", "We make a living by what we get, but we make a life by what we give");
+			myMap.set("Gandhi", "Whatever you do may seem insignificant to you, but it is most important that you do it");
+			myMap.set("Mr. Lau", "See me please");
+			myMap.set("Daniel Shin", "Life is like a butt - grasp it while you can");
+			myMap.set("Edmund Lau", "It's very doable");
+			myMap.set("Robin Williams", "No matter what people tell you, words and ideas can change the world");
+			myMap.set("Buddha", "No one saves us but ourselves");
+			myMap.set("Maya Angelou", "A bird doesn't sing because it has an answer, it sings because it has a song");
+			myMap.set("Steve Jobs", "Don't let the noise of other's opinions drown out your own inner voice");
+			myMap.set("Mr. Edmund Lau", "Can do better");
+			myMap.set("Daniel Liu", "In the waves of change we find our direction");
+			$("#authorDisplay p").text('"              ' + myMap.get(actualQuote) + '            "');
+			$("#authorDisplay p").addClass("load");
+			$("#quoteDisplay p").text(actualQuote);
+			$("#quoteDisplay p").addClass("load");
+
+		});
+	</script>
+
+	<footer id="footer">
+						<p class="copyright">&copy; CougarSpace. Design: Eric Guan and Saim Majid.</p>
+	</footer>
+<!-- calendar begins -->
+    <button id = "backbtn" type="button" class="btn btn-success">Close</button>
+	<div id="calendar"></div>	
+	<!-- calendar ends -->
+<!-- news begins -->
+<button id = "backbtn2" type="button" class="btn btn-success">Close</button>
+<!--<div id = "twitter">
+        <a class="twitter-timeline" style="display:none" data-height="500" data-width="600" data-theme="dark" href="https://twitter.com/OaktonHS">Tweets by OaktonHS</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  
+    </div> -->
+    <div>
+    <p id = "feed" align = "center">
+<iframe src="https://feed.mikle.com/widget/v2/31385/" style="position: relative; height: 100%; border: none" width = "600px" height="550px" align="middle"></iframe>
+    </p>
+    </div>
+<!-- news ends -->
+
+
+
+<!-- Scripts -->
+<script type="text/javascript" src="assets/js/util.js"></script>
+<script type="text/javascript" src="assets/js/agenda.js"></script>
+<script type="text/javascript" src="assets/js/news.js"></script>
+<!-- end scripts -->
 
 </body>
 </html>
